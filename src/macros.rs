@@ -22,7 +22,7 @@ macro_rules! formats {
         )*
     } => {
         /// A file format.
-        #[derive(Clone, Copy, Debug, Eq, PartialEq)]
+        #[derive(Clone, Copy, Debug, Eq, PartialEq, serde::Deserialize, serde::Serialize)]
         #[non_exhaustive]
         pub enum FileFormat {
             $(
